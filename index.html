@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcello's Portfolio</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main>
+        <section id="home">
+            <div class="container">
+                <p id="name"></p>
+                <p class="intro">Software Developer</p>
+                <p class="intro">Traveler</p>
+                <p class="intro">Los Angeles, CA</p>
+                <p class="intro">Check out my <a class="pagelink" href="javascript:void(0)" onclick="scrollFunction('projects');">projects</a> 
+                    or learn more <a class="pagelink" href="javascript:void(0)" onclick="scrollFunction('about');">about me</a> below</p>
+            </div>
+        </section>
+        <section id="about">
+            <h1>About Me</h1>
+            <div id="titleeffect">
+                <p id="red">&#9679;</p>
+                <p id="yellow">&#9679;</p>
+                <p id="green">&#9679;</p>
+            </div>
+            <div id="info">
+                <p class="in">> Marcello.education</p>
+                <p class="out">["B.A. Computer Science - Duke University", "Tech Elevator"]</p><br>
+                <p class="in">> Marcello.resume</p>
+                <p class="out">"<a class="infolink" href="resources/resume.pdf" target="_blank">resume.pdf</a>"</p><br>
+                <p class="in">> Marcello.location</p>
+                <p class="out">"Los Angeles, CA"</p><br>
+                <p class="in">> Marcello.hobbies</p>
+                <p class="out">["basketball", "traveling", "sleeping", "movies", "hiking", "working out", "eating"]</p><br>
+                <p class="in">> Marcello.skills</p>
+                <p class="out">["Java", "Python", "Flask", "Django", "HTML/CSS", "JavaScript", "Vue.js", "ReactJS", "REST API" "git"]</p><br>
+                <p class="in">> Marcello.contactInfo</p>
+                <p class="out">["<a class="infolink" href="mailto:marcellohhwang@gmail.com">marcellohhwang@gmail.com</a>", "<a class="infolink" href="https://www.linkedin.com/in/marcellohh/">LinkedIn</a>", "<a class="infolink" href="https://github.com/hmh24">GitHub</a>"]</p><br>
+            </div>  
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="project">
+                <h2>Crypto Tax Buddy</h2>
+                <h4>A Flask web app that provides historical 1-minute OHLC data for a cryptocurrency trading pair at a specified date and time by calling Coinbase Pro's API</h4> 
+                <p>This project originally started as a command line program in Java that used the Spring REST client to retrieve account balances and 1-minute OHLC data. I then made the same CLI application using Python, after which I created a simple web app with front-end using Flask. It proved to be extremely useful to me as I relied on it heavily while I was completing my taxes.</p>
+                <div class="centerlink">
+                    <a href="">View Source</a>
+                </div>
+            </div>
+            <div class="project">
+                <h2>NBA Shot Chart Builder</h2>
+                <h4>A command line program written in Python that uses swar's API client for nba.com to build shot charts for individual NBA players for a specified regular season</h4> 
+                <p>All of my sports knowledge went into basketball, and I was curious as to how shot charts are created for NBA players. This project uses the requests module in Python to make HTTP requests using a well-documented API client for the nba website. With the data, I used a common plotting library called Matplotlib to, first, draw a model of an NBA court, and finally plot the x and y coordinates of every shot attempted by a player for a given season.</p>
+                <div class="centerlink">
+                    <a href="">View Source</a>
+                </div>
+            </div>
+            <div class="project">
+                <h2>Tenmo</h2>
+                <h4>A clone of Venmo, this command line program built using Java allows users to transfer money and check balances</h4>
+                <p>For this project, I worked with a partner to create a REST API server and command line application using Spring Boot while following MVC and DAO design patterns. Users start with 1000 "TEBucks" and can send them to other users in the system.</p>
+                <div class="centerlink">
+                    <a href="">View Source</a>
+                </div>
+            </div>
+            <div class="project">
+                <h2>Portfolio Site</h2>
+                <h4>This current page! A site to introduce myself and show my projects</h4>
+                <p>This page that you're currently viewing is a reponsive website built using HTML, CSS, and JavaScript. Nothing too crazy, hope you learn something about me from the site and the projects listed above!</p>
+                <div class="centerlink">
+                    <a href="">View Source</a>
+                </div>
+            </div>
+            <div id="contact">
+                <h3><a href="mailto:marcellohhwang@gmail.com">marcellohhwang@gmail.com</a> || <a href="https://www.linkedin.com/in/marcellohh/">LinkedIn</a> || <a href="https://github.com/hmh24">GitHub</a> </h3>
+                <p>Made by Marcello Hwang @ 2022</p>
+                <img src="resources/memoji.PNG" alt="me" id="memoji">
+            </div>
+        </section>
+    </main>
+    <script>
+        var messageArray = "> Marcello Hwang ";
+        var textPosition = 0;
+        var speed = 100;
+
+        typewriter = () => {
+            document.querySelector("#name").innerHTML = messageArray.substring(0, textPosition) + "<span>\u258e</span>";
+            if(textPosition++ != messageArray.length) {
+                setTimeout(typewriter, speed);
+            }
+        }
+
+        window.addEventListener("load", typewriter);
+    </script>
+    <script>
+        function scrollFunction(scrollTo) {
+            var elmnt = document.getElementById(scrollTo);
+            elmnt.scrollIntoView({behavior: "smooth"});
+        }
+    </script>
+</body>
+</html>

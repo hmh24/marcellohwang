@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+    background-color: #cfcfcf;
+}
+
+#home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("resources/frontpic.JPG");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#name {
+    font-size: 66px;
+    font-weight: 900;
+    color: white;
+    vertical-align: middle;
+    padding-bottom: 30px;
+}
+
+.intro {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+.pagelink {
+    font-size: 27px;
+    color: #db0007;
+    font-weight: 660;
+    text-decoration: none;
+}
+
+
+.pagelink:hover {
+    filter: brightness(0.5);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#about h1 {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+#about {
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+
+#info {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(45, 44, 44);
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.5);
+}
+
+#titleeffect {
+    height: auto;
+    background-color: rgb(131, 131, 131);
+    width: 50%;
+    margin: 0 auto;
+    padding: 3px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#red, #green, #yellow {
+    display: inline;
+    font-size: 25px;
+
+}
+
+#red {
+    padding-left: 10px;
+    color: #FF605C;
+}
+
+#green {
+    color: #00CA4E;
+}
+
+#yellow {
+    color: #FFBD44;
+}
+
+#info p {
+   margin: 0px 10px 10px;
+   padding-top: 5px;
+}
+
+.infolink {
+    color: #db0007;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.infolink:hover {
+    filter: brightness(0.6);
+}
+
+
+.in {
+    color: white;
+}
+
+.out {
+    color: yellow;
+}
+
+#projects h1 {
+    text-align: center;
+    padding-top: 2%;
+    margin-top: 0;
+    margin-bottom: 4%;
+}
+
+.project {
+    background-color: #b3b3b3;
+    box-shadow: 0 7px 10px rgb(0 0 0 / 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 3% auto;
+}
+
+.project a {
+    text-decoration: none;
+    background-color: #dc5553;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.3);
+}
+
+.project a:hover {
+    filter: brightness(0.7);
+}
+
+.project a:active {
+    font-weight: 200;
+}
+
+.centerlink {
+    text-align: center;
+    padding-top: 10px;
+    margin: 25px;
+}
+
+#contact {
+    margin-top: 9%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#contact h3 {
+    word-spacing: 20px;
+    margin-bottom: 3%;
+}
+
+#contact p {
+    padding-bottom: 25px;
+}
+
+#contact a {
+    text-decoration: none;
+    color: black;
+}
+
+#contact a:hover {
+    font-weight: 900;
+}
+
+#memoji {
+    position: absolute;
+    
+    margin-left: 5%;
+    width: 15%;
+}
+
+span {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #name {
+        font-size: 24px;
+    }
+
+    .intro {
+        font-size: 14px;
+    }
+
+    .pagelink {
+        font-size: 20px;
+    }
+
+    #titleeffect, #info, .project {
+        width: 75%;
+    }
+    
+    #memoji {
+        display: none;
+    }
+
+    #contact h3 {
+        font-size: 16px;
+        word-spacing: 10px;
+    }
+
+    #home {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("resources/phonepic.JPG");
+        min-height: 100vh;
+        background-size: cover;
+    }
+}
